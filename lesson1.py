@@ -76,7 +76,7 @@ print(to_do_list)
 del to_do_list[2]
 print(to_do_list)
 
-#updating data, you can change the value of an element by assigning a new value
+#updating data, you can change the value of an element by assigning a new value.
 to_do_list[0] = "teach 1D"
 
 print(to_do_list)
