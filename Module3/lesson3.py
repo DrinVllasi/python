@@ -74,3 +74,50 @@ my_set = {1,2,3}
 #add number 7 at the end of the set
 
 my_set.add(7)
+
+#remove number 3 from my set
+
+my_set.remove(3) #remove method
+
+#removing 8 from the set without throwing an error if 8 is now on the set
+
+my_set.discard(8)
+print(my_set)
+
+#removingall the numbers from the set
+my_set.clear()
+
+print(my_set)
+
+
+#remove duplications from a list
+
+#create a list that contains duplications
+
+my_list = [1,2,2,2,3,4,4,4,5,6]
+
+#convert this list to a set to remove duplications
+unique_set = set(my_list)
+
+print(unique_set)
+
+#conver this set to a list
+unique_list = list(unique_set)
+print(unique_list)
+
+
+#checking for common elements
+
+blertas_interests = {"music","movies","travel"}
+drilonis_interests = {"movies","games","skiing"}
+
+common_interests = blertas_interests.intersection(drilonis_interests)
+print(common_interests)
+
+#IN operator
+
+colors = {"red","purple","yellow","blue"}
+color = "blue"
+
+print(color in colors)
+
