@@ -54,3 +54,12 @@ difference_operator = set1 - set2
 
 print("Difference of set1 and set2 using the difference method: ",difference_method)
 print("Difference of set1 and set2 using the difference operator: ",difference_operator)
+
+#computing the elements that are in set1 and in set2 but not their intersection
+symmetric_difference_method = set1.symmetric_difference(set2)
+
+#computing the elements that are in set1 and in set2 but not in their intersection using the ^ operator
+symmetric_difference_operator = set1 ^ set2
+
+print("Symmetric difference of set1 and set2 using the symmetric difference method: ",symmetric_difference_method)
+print("Symmetric difference of set1 and set2 using the symmetric difference operator: ",symmetric_difference_operator)
