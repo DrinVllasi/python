@@ -12,8 +12,8 @@
 #my_set = set()
 #print(my_set)
 
-my_set = {1,1,2,3,3,4,5,3,2,3}
-print(my_set) #set removes all duplicates
+#my_set = {1,1,2,3,3,4,5,3,2,3}
+#print(my_set) #set removes all duplicates
 
 
 #################
@@ -63,3 +63,14 @@ symmetric_difference_operator = set1 ^ set2
 
 print("Symmetric difference of set1 and set2 using the symmetric difference method: ",symmetric_difference_method)
 print("Symmetric difference of set1 and set2 using the symmetric difference operator: ",symmetric_difference_operator)
+
+
+#SET METHODS
+
+#Create a set
+
+my_set = {1,2,3}
+
+#add number 7 at the end of the set
+
+my_set.add(7)
