@@ -47,17 +47,6 @@ book.print_info()
 # print(square.area())
 
 
-
-
-
-
-
-
-
-
-
-
-
 # class Student:
 #     def __init__(self,name,age):
 #         self.__name = name
