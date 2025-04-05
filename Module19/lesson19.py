@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
+from streamlit import sidebar
 
 st.header("Displaying Data Frames")
 
@@ -40,6 +41,28 @@ if submit_button:
         'Genre': new_genre,
 
     }
+    books_df = pd.concat([pd.DataFrame(new_data, index=[0]), books_df], ignore_index=True)
+    books_df.to_csv("Module18/bestsellers_with_categories_2022_03_27.csv", index=False)
+    st.sidebar.success("Your book has been added successfully")
+
+st.sidebar.header("Filter Options")
+selected_author = st.sidebar.selectbox("Select Author",['All'] +list(books_df['Author'].unique()))
+selected_Year = st.sidebar.selectbox("Select Year",['All'] +list(books_df['Year'].unique()))
+selected_genre = st.sidebar.selectbox("Select Genre",['All'] +list(books_df['Genre'].unique()))
+min_rating = st.sidebar.slider("Minimum User Rating",0.5,5.0,0.0,0.1)
+max_rating = st.sidebar.slider("Maximum Price",0,books_df['Price'].max(),books_df['Price'].max())
+
+filtered_books_df = books_df.copy()
+
+if selected_author != "All":
+    filtered_books_df = filtered_books_df[filtered_books_df['Author'] == selected_author]
+if selected_Year != "All":
+    filtered_books_df = filtered_books_df[filtered_books_df['Year'] == selected_Year]
+if selected_genre != "All":
+    filtered_books_df = filtered_books_df[filtered_books_df['Genre'] == selected_genre]
+
+filtered_books_df = filtered_books_df[(filtered_books_df['User Rating'] >= min_rating) & filtered_books_df['Price'] <= max_rating]
+
 
 st.subheader("Summary Statistics")
 total_books = books_df.shape[0]
