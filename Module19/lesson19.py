@@ -67,6 +67,7 @@ filtered_books_df = filtered_books_df[(filtered_books_df['User Rating'] >= min_r
 st.subheader("Summary Statistics")
 total_books = books_df.shape[0]
 unique_titles = books_df['Name'].nunique()
+
 average_rating = books_df['User Rating'].mean()
 average_price = books_df['Price'].mean()
 

@@ -1,4 +1,4 @@
-#Declaring a variable
+-#Declaring a variable
 
 #variable_name = value
 
