@@ -11,3 +11,14 @@ def create_developer(developer: Developer):
 @app.post("/projects/")
 def create_project(projct: Project):
     return{"message": "Project created successfully","project":project}
+
+@app.get("/projects/")
+def get_projects():
+    sample_project = Project(
+        title = "Sample Project",
+        description = "This is a sample project",
+        language = ["Python","Javascript"],
+        lead_developer = Developer(name="John Doe", experience=5)
+
+    )
+    return {"Projects": [sample_project]}
