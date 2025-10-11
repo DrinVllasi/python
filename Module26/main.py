@@ -16,7 +16,7 @@ app.include_router(recipes.router)
 @app.on_event("startup")
 def startup():
     conn = get_db_connection()
-    cursor = conn.cursos()
+    cursor = conn.cursor()
 
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS categories (
