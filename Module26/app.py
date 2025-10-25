@@ -1,11 +1,10 @@
 import streamlit as st
-import request
+import requests
 import pandas as pd
 from dotenv import load_dotenv
 import os
 
-from project1.app import response
-
+00000000000000000000000000000
 load_dotenv()
 
 API_BASE_URL = os.getenv("API_BASe_URL")

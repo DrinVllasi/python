@@ -2,12 +2,9 @@ from sqlite3.dbapi2 import paramstyle
 
 from fastapi import APIRouter, HTTPException
 from typing import List
-from ..models.recipe import Recipe, RecipeCreate
-from ..database import get_db_connection
+from models.recipe import Recipe, RecipeCreate
+from database import get_db_connection
 
-from Module24.main import cursor
-from project1.app import response
-from project1.main import create_project
 
 router = APIRouter()
 

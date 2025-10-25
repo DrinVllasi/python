@@ -1,11 +1,10 @@
 import sqlite3
 from typing import List
 from streamlit import status
-from ..models.category import Category, CategoryCreate
-from ..database import get_db_connection
+from models.category import Category, CategoryCreate
+from database import get_db_connection
 from fastapi import APIRouter, HTTPException
 
-from project1.app import response
 
 router = APIRouter()
 
@@ -54,7 +53,7 @@ def update_category(category_id: int, category: CategoryCreate):
     if cursor.rowcount == 0:
         conn.close()
         raise HTTPException(status_code=404, detail="Category not found")
-     conn.commit()
+    conn.commit()
     conn.close()
     return Category(id = category_id, name=category.name)
 

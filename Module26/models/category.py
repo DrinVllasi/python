@@ -12,4 +12,3 @@ class CategoryResponse(BaseModel):
 
 class Category(CategoryBase):
     id: int
-    ..

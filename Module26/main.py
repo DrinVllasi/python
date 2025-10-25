@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers import recipes,categories
+from routers import recipes, categories
 import os
 from dotenv import load_dotenv
 from database import get_db_connection
